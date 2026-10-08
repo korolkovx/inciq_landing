@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inciq - Слой объективных данных о косметике</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -341,7 +341,8 @@
                                     <h4 class="font-bold text-gray-900 text-lg leading-none mb-1">Совместимость</h4>
                                     <p class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Ухода и кожи</p>
                                 </div>
-                                <span class="text-4xl font-bold fraunces text-black transition-all" id="context-score">100%</span>
+                                <!-- Fixed typography geometry for numbers (inter font-black) -->
+                                <span class="text-4xl font-black tracking-tighter text-black transition-all leading-none" id="context-score">100%</span>
                             </div>
                             
                             <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-4">Особенности кожи</p>
@@ -494,14 +495,14 @@
                                 <h4 class="fraunces text-xl font-bold mb-1 leading-tight tracking-tight text-black">Восстановление барьера</h4>
                                 <p class="text-xs text-gray-500 font-medium mb-4">4 проверенных средства</p>
                                 <div class="flex gap-2">
-                                    <!-- Unified avatar borders border-white -->
-                                    <div class="h-10 w-10 bg-gray-50 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 shadow-sm relative z-10">
+                                    <!-- Unified avatar borders border-white for all overlapping layers -->
+                                    <div class="h-10 w-10 bg-gray-50 border-[3px] border-white rounded-full flex items-center justify-center text-gray-400 shadow-md relative z-10">
                                         <svg viewBox="0 0 100 150" class="w-4 h-6" fill="currentColor"><rect x="42" y="10" width="16" height="20" rx="4"/><rect x="35" y="30" width="30" height="15" rx="3"/><path d="M25 55 C25 45, 35 45, 35 45 L65 45 C65 45, 75 45, 75 55 L75 130 C75 140, 65 140, 65 140 L35 140 C35 140, 25 140, 25 130 Z" fill="none" stroke="currentColor" stroke-width="6"/></svg>
                                     </div>
-                                    <div class="h-10 w-10 bg-gray-50 border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-gray-400 shadow-sm relative z-20">
+                                    <div class="h-10 w-10 bg-gray-50 border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-gray-400 shadow-md relative z-20">
                                         <svg viewBox="0 0 100 100" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="8"><path d="M20 40 L80 40 L85 90 C85 95, 80 100, 75 100 L25 100 C20 100, 15 95, 15 90 Z"/><rect x="25" y="20" width="50" height="20" rx="4" fill="currentColor"/></svg>
                                     </div>
-                                    <div class="h-10 w-10 bg-gray-50 border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-gray-400 shadow-sm relative z-30">
+                                    <div class="h-10 w-10 bg-gray-50 border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-gray-400 shadow-md relative z-30">
                                         <svg viewBox="0 0 100 150" class="w-4 h-6" fill="none" stroke="currentColor" stroke-width="8"><path d="M30 130 L70 130 L80 40 C80 30, 20 30, 20 40 Z"/><rect x="35" y="130" width="30" height="15" rx="2" fill="currentColor"/></svg>
                                     </div>
                                 </div>
@@ -519,11 +520,11 @@
                                 <h4 class="fraunces text-xl font-bold mb-1 leading-tight tracking-tight text-black">Рутина под ретинол</h4>
                                 <p class="text-xs text-black font-medium mb-4">Идеальная совместимость <span class="font-bold bg-yellow px-1 rounded">95%</span></p>
                                 <div class="flex gap-2">
-                                    <div class="h-10 w-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-800 shadow-sm relative z-10">
+                                    <div class="h-10 w-10 bg-white border-[3px] border-white rounded-full flex items-center justify-center text-gray-800 shadow-md relative z-10">
                                         <svg viewBox="0 0 100 150" class="w-4 h-6" fill="none" stroke="currentColor" stroke-width="8"><path d="M30 130 L70 130 L80 40 C80 30, 20 30, 20 40 Z"/><rect x="35" y="130" width="30" height="15" rx="2" fill="currentColor"/></svg>
                                     </div>
-                                    <!-- Changed border to match the clean white card background -->
-                                    <div class="h-10 w-10 bg-black border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-white shadow-sm relative z-20">
+                                    <!-- Unified thick white border with shadow to separate elements cleanly -->
+                                    <div class="h-10 w-10 bg-black border-[3px] border-white rounded-full -ml-4 flex items-center justify-center text-white shadow-md relative z-20">
                                         <svg viewBox="0 0 100 150" class="w-4 h-6" fill="currentColor"><rect x="42" y="10" width="16" height="20" rx="4"/><rect x="35" y="30" width="30" height="15" rx="3"/><path d="M25 55 C25 45, 35 45, 35 45 L65 45 C65 45, 75 45, 75 55 L75 130 C75 140, 65 140, 65 140 L35 140 C35 140, 25 140, 25 130 Z" fill="none" stroke="currentColor" stroke-width="6"/></svg>
                                     </div>
                                 </div>
